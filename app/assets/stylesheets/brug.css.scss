@@ -1,0 +1,200 @@
+/* This uses Bourbon and a lot of modular-scale functions
+-------------------------------------------------------- */
+@import 'bourbon';
+$redcolor: #A60A17;
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: modular-scale(18px, 0, 1.618);
+}
+
+section {
+  margin: 0 auto;
+  padding: modular-scale(18px, 1, 1.618) 0;
+}
+
+h1 {
+  color: $redcolor;
+  font-size: modular-scale(18px, 3, 1.618);
+}
+
+h2 {
+  font-size: modular-scale(18px, 2, 1.618);
+}
+
+h3 {
+  font-size: modular-scale(18px, 1, 1.618);
+}
+
+h4 {
+  font-size: modular-scale(18px, 0, 1.618);
+  font-weight: bold;
+}
+
+.wrapper {
+  max-width: 63em;
+  margin: 0 auto;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  // background: url('headerbg.jpg') repeat center center fixed;
+}
+
+header .wrapper {
+  max-width: 100%;
+  padding: modular-scale(18px, 4, 1.618) 0;
+  background-color: rgba(0,0,0,0.8);
+}
+
+header {
+  h1, h2, h3, h4 {
+    font-weight: 200;
+  }
+}
+
+header h1 {
+  max-width: 7em;
+  margin: 0 auto 1em auto;
+  margin-bottom: modular-scale(18px, 1, 1.618);
+  font-weight: normal
+}
+
+header h2 {
+  margin: 1em auto;
+  font-size: modular-scale(18px, 1, 1.618);
+}
+
+header .divider {
+  font-size: modular-scale(18px, 0, 1.618);
+}
+
+.divider {
+  &:before, &:after {
+    content: "\2014";
+    margin: 0 0.5em;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: $redcolor;
+  text-decoration: none;
+  border-bottom: 2px solid $redcolor;
+}
+
+a:hover,
+a:active {
+  color: darken($redcolor, 10%);
+  border-bottom: 2px solid darken($redcolor, 10%);
+}
+
+a.call-to-action {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: $redcolor;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 0.5em 2em;
+  border: none;
+  font-weight: 200;
+  &:hover {
+    background: darken($redcolor, 10%);
+  }
+}
+
+header .call-to-action {
+  font-size: modular-scale(18px, 1, 1.618);
+  padding: 0.5em 2em;
+  margin-top: modular-scale(18px, -1, 1.618);;
+  color: #fff;
+}
+
+
+/* Navigation
+-------------------------------------------- */
+
+nav {
+  width: 100%;
+  text-align: center;
+  line-height: modular-scale(18px, 2, 1.618);
+  border-bottom: 1px solid #ccc;
+  background: rgba(255,255,255,0.95);
+  position: absolute;
+}
+
+nav.affix {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo-type {
+  font-size: modular-scale(18px, 1, 1.618);
+  font-weight: bold;
+  letter-spacing: modular-scale(18px, -3, 1.618);
+  color: $redcolor;
+  border: 2px solid $redcolor;
+  float: left;
+  line-height: 1;
+  padding: modular-scale(18px, -5, 1.618) modular-scale(18px, -4, 1.618);
+  position: relative;
+  margin-top: modular-scale(18px, 2, 1.618)/2;
+}
+
+nav ul {
+  display: inline-block;
+  text-align: right;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 modular-scale(18px, 1, 1.618);
+}
+
+nav ul li a {
+  text-transform: uppercase;
+}
+
+nav ul li.active a {
+  padding: 0 modular-scale(18px, -2, 1.618);
+  border: 2px solid $redcolor;
+}
+
+/* Contact
+-------------------------------------------- */
+
+#contact {
+  font-size: modular-scale(18px, 2, 1.618);
+  padding: modular-scale(18px, 4, 1.618) 0;
+  text-align: center;
+  color: $redcolor;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  /* Styles for mobile */
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles for tablet */
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  /* Don't forget your Retina CSS! */
+
+}
