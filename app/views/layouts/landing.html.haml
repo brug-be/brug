@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title BRUG - Belgian Ruby User Group
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body{"data-spy" => "scroll", "data-target" => "nav"}
+    %header= render 'layouts/header'
+    %nav#navigation= render 'layouts/navigation'
+    = yield
+    %section#members= render 'layouts/members'
+    %section#contact= render 'layouts/footer'
