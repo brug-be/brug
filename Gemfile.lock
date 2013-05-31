@@ -73,7 +73,7 @@ GEM
     highline (1.6.19)
     hike (1.2.2)
     i18n (0.6.4)
-    jquery-rails (3.0.0)
+    jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.7)
@@ -172,7 +172,7 @@ DEPENDENCIES
   database_cleaner (~> 1.0.1)
   dotenv-rails
   haml-rails
-  jquery-rails
+  jquery-rails (= 2.1.4)
   json (~> 1.7.7)
   minitest
   mysql2
