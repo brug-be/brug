@@ -49,6 +49,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    database_cleaner (1.0.1)
     dotenv (0.7.0)
     dotenv-rails (0.7.0)
       dotenv (= 0.7.0)
@@ -153,6 +154,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   compass-rails (~> 1.0.3)
+  database_cleaner (~> 1.0.1)
   dotenv-rails
   haml-rails
   jquery-rails
