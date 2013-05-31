@@ -21,7 +21,10 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
+  gem 'minitest'
   gem 'sqlite3'
+  gem 'turn'
 end
 
 group :development, :test do
