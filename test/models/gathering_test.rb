@@ -10,4 +10,20 @@ describe Gathering do
 
     gathering.members.count.must_equal 3
   end
+
+  it "has a futur scope" do
+    Gathering.destroy_all
+    # today
+    Gathering.create!(name: 'Burgers!', location: 'Brussels', description: 'Omnomnomnom', start_at: Time.current, kind: 'food')
+    # futur
+    3.times do |i|
+      Gathering.create!(name: "Burgers! #{i}", location: 'Brussels', description: 'Omnomnomnom', start_at: 2.days.from_now, kind: 'food')
+    end
+    #history
+    2.times do |i|
+      Gathering.create!(name: "Burgers! #{i}", location: 'Brussels', description: 'Omnomnomnom', start_at: 2.days.ago, kind: 'food')
+    end
+
+    Gathering.futur.count.must_equal 4
+  end
 end
