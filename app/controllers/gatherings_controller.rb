@@ -1,7 +1,7 @@
 class GatheringsController < ApplicationController
   before_filter :member_required, except: [:index]
   def index
-    @gatherings = Gathering.futur
+    @gatherings = Gathering.future
   end
 
   def new
