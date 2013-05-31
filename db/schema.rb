@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130531092931) do
+ActiveRecord::Schema.define(version: 20130531104949) do
 
   create_table "gatherings", force: true do |t|
     t.string   "name",        null: false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130531092931) do
     t.datetime "start_at",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id",    null: false
   end
 
   create_table "members", force: true do |t|
