@@ -4,6 +4,7 @@ gem 'rails', '4.0.0.rc1'
 gem 'mysql2'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'json', '~> 1.7.7'
@@ -33,6 +34,5 @@ group :test do
 end
 
 group :development, :test do
-  gem 'dotenv-rails'
   gem 'quiet_assets'
 end
