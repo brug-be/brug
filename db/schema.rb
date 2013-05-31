@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130531083927) do
+ActiveRecord::Schema.define(version: 20130531084652) do
 
   create_table "gatherings", force: true do |t|
     t.string   "name",        null: false
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20130531083927) do
     t.text     "description", null: false
     t.string   "type",        null: false
     t.datetime "start_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "members", force: true do |t|
+    t.string   "provider",   null: false
+    t.string   "uid",        null: false
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
