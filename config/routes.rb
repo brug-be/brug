@@ -3,5 +3,7 @@ Brug::Application.routes.draw do
   get 'auth/failure' => redirect('/')
   get 'signout' => 'sessions#destroy', as: 'signout'
 
-  root 'application#test'
+  resources :gatherings
+
+  root 'gatherings#index'
 end

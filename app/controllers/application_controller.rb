@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
     @current_member ||= Member.find(session[:member_id]) if session[:member_id]
   end
   helper_method :current_member
+
+  def member_required
+    redirect_to :root unless current_member.present?
+  end
 end
