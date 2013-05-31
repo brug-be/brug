@@ -1,4 +1,4 @@
 class Gathering < ActiveRecord::Base
   has_many :participations
-  has_many :participants, through: :participations, source: :member
+  has_many :members, through: :participations
 end

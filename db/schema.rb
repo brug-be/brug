@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130531092037) do
+ActiveRecord::Schema.define(version: 20130531092931) do
 
   create_table "gatherings", force: true do |t|
     t.string   "name",        null: false
     t.string   "location",    null: false
     t.text     "description", null: false
-    t.string   "type",        null: false
+    t.string   "kind",        null: false
     t.datetime "start_at",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
