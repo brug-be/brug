@@ -28,6 +28,9 @@ GEM
     ansi (1.4.3)
     arel (4.0.0)
     atomic (1.1.9)
+    bourbon (3.1.6)
+      sass (>= 3.2.0)
+      thor
     builder (3.1.4)
     capistrano (2.15.4)
       highline
@@ -44,7 +47,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    chunky_png (1.2.8)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -52,12 +54,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
     database_cleaner (1.0.1)
     dotenv (0.7.0)
     dotenv-rails (0.7.0)
@@ -65,7 +61,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fssm (0.2.10)
     git (1.2.5)
     haml (4.0.3)
       tilt
@@ -170,10 +165,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon (~> 3.1.6)
   capo
   capybara
   coffee-rails (~> 4.0.0)
-  compass-rails (~> 1.0.3)
   database_cleaner (~> 1.0.1)
   dotenv-rails
   haml-rails

@@ -15,7 +15,7 @@ gem 'turbolinks'
 # in production environments by default.
 
 group :assets do
-  gem 'compass-rails', '~> 1.0.3'
+  gem 'bourbon', '~> 3.1.6'
   gem 'sass-rails', '~> 4.0.0.rc1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.3.0'
