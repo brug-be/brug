@@ -6,6 +6,7 @@ gem 'mysql2'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'json', '~> 1.7.7'
 gem 'omniauth-twitter'
 gem 'turbolinks'
 
@@ -23,6 +24,7 @@ group :development do
 end
 
 group :test do
+  gem 'capo'
   gem 'capybara'
   gem "database_cleaner", "~> 1.0.1"
   gem 'minitest'
