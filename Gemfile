@@ -3,14 +3,15 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.rc1'
 gem 'mysql2'
 
+gem 'bourbon', '~> 3.1.6'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'jquery-rails', '2.1.4'
 gem 'json', '~> 1.7.7'
 gem 'omniauth-twitter'
+gem "simple_form", git: 'git@github.com:plataformatec/simple_form.git'
 gem 'turbolinks'
-gem 'bourbon', '~> 3.1.6'
 
 # Gems used only for assets and not required
 # in production environments by default.

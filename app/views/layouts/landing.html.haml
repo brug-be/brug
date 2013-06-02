@@ -10,6 +10,6 @@
   %body{"data-spy" => "scroll", "data-target" => "nav"}
     %header= render 'layouts/header'
     %nav#navigation= render 'layouts/navigation'
-    = yield
+    %section= yield
     %section#members= render 'layouts/members'
     %section#contact= render 'layouts/footer'

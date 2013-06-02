@@ -10,9 +10,9 @@ class GatheringsController < ApplicationController
   end
 
   def create
-    @gathering = current_member.created_gatherings.new params[:gathering]
+    @gathering = current_member.created_gatherings.new gathering_params
     if @gathering.save
-      redirect_to @gathering
+      redirect_to :root
     else
       render :new
     end
@@ -24,9 +24,9 @@ class GatheringsController < ApplicationController
 
   def update
     @gathering = current_member.created_gatherings.find params[:id]
-    @gathering = current_member.created_gatherings.attributes = params[:gathering]
+    @gathering.attributes = gathering_params
     if @gathering.save
-      redirect_to @gathering
+      redirect_to :root
     else
       render :edit
     end
@@ -36,5 +36,10 @@ class GatheringsController < ApplicationController
     @gathering = current_member.created_gatherings.find params[:id]
     @gathering.destroy
     redirect_to :root
+  end
+
+  private
+  def gathering_params
+    params.require(:gathering).permit(:name, :location, :kind, :description, :start_at)
   end
 end
