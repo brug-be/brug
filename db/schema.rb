@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130531104949) do
+ActiveRecord::Schema.define(version: 20130602132737) do
 
   create_table "gatherings", force: true do |t|
     t.string   "name",        null: false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20130531104949) do
     t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_url"
   end
 
   create_table "participations", force: true do |t|

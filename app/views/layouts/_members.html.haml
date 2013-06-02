@@ -1,2 +1,6 @@
-- Member.all.each do |member|
-  %p= member.name
+:css
+  wrapper.members img{border-radius: 24px;-webkit-border-radius: 24px;-moz-border-radius: 24px;-o-border-radius: 24px;overflow: hidden;opacity: 0.6;transition: opacity 0.5s;-moz-transition: opacity 0.5s;-webkit-transition: opacity 0.5s;-o-transition: opacity 0.5s;}
+  wrapper.members p{border-radius: 24px;-webkit-border-radius: 24px;-moz-border-radius: 24px;-o-border-radius: 24px;overflow: hidden;background:#fff;}
+%wrapper.members
+  - Member.all.each do |member|
+    %p= link_to image_tag(member.avatar_url), "http://twitter.com/#{member.name}"

@@ -13,3 +13,9 @@
     %section= yield
     %section#members= render 'layouts/members'
     %section#contact= render 'layouts/footer'
+    - if current_member
+      Signed in as #{current_member.name}!
+      = link_to "Sign out", signout_path
+    - else
+      = link_to "Sign in with Twitter", "/auth/twitter"
+
