@@ -170,6 +170,11 @@ nav ul li.active a {
   border: 2px solid $redcolor;
 }
 
+nav ul li.active:hover a,
+nav ul li.active:active a {
+  border: 2px solid darken($redcolor, 10%);
+  color: darken($redcolor, 10%);
+}
 /* Contact
 -------------------------------------------- */
 
