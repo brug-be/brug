@@ -5,5 +5,5 @@
       %h1= gathering.name
       %h2= gathering.start_at
       %p= gathering.description
-      %a.call-to-action{:href => "#"} I'll be there!
+      = participations_link_for gathering
       .event-attending 4 attending

@@ -15,4 +15,8 @@ class Member < ActiveRecord::Base
       member.avatar_url = auth["info"]["image"]
     end
   end
+
+  def owns? gathering
+    created_gatherings.include? gathering
+  end
 end
