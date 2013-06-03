@@ -12,7 +12,7 @@ class Member < ActiveRecord::Base
       member.provider = auth["provider"]
       member.uid = auth["uid"]
       member.name = auth["info"]["nickname"]
-      member.avatar_url = auth["info"]["image"]
+      member.avatar_url = auth["info"]["image"].gsub(/_normal/, "")
     end
   end
 
