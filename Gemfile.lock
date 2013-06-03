@@ -80,6 +80,9 @@ GEM
     hashie (2.0.5)
     highline (1.6.19)
     hike (1.2.2)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.4)
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
@@ -92,6 +95,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.4)
+    multi_xml (0.5.3)
     mysql2 (0.3.11)
     net-scp (1.1.1)
       net-ssh (>= 2.6.5)
@@ -180,6 +184,7 @@ DEPENDENCIES
   database_cleaner (~> 1.0.1)
   dotenv-rails
   haml-rails
+  httparty (~> 0.11.0)
   jquery-rails (= 2.1.4)
   json (~> 1.7.7)
   minitest
