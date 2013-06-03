@@ -9,7 +9,6 @@ gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'httparty', '~> 0.11.0'
 gem 'jquery-rails', '2.1.4'
-gem 'json', '~> 1.7.7'
 gem 'omniauth-twitter'
 gem "redcarpet", "~> 2.3.0"
 gem "simple_form", git: 'git@github.com:plataformatec/simple_form.git'
