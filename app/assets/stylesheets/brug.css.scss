@@ -186,6 +186,66 @@ nav ul li.active:active a {
   border: 2px solid darken($redcolor, 10%);
   color: darken($redcolor, 10%);
 }
+
+
+/* Events
+-------------------------------------------- */
+
+.event {
+  @include clearfix;
+  margin: modular-scale(18px, 3, 1.618) auto;
+}
+
+.event .event-name a:link,
+.event .event-name a:visited {
+  color: $textcolor;
+  border: 0;
+}
+
+.event .event-name a:hover,
+.event .event-name a:active {
+  color: darken($textcolor, 5%);
+}
+
+.event aside {
+  float: left;
+  text-align: right;
+  height: 100%;
+  width: 30%;
+}
+
+.event aside,
+.event aside a:link,
+.event aside a:visited {
+  color: lighten($textcolor, 30%);
+  border-color: lighten($textcolor, 30%);
+}
+
+.event aside a:hover,
+.event aside a:active {
+  color: lighten($textcolor, 20%);
+  border-color: lighten($textcolor, 20%);
+}
+
+.event article {
+  float: left;
+  width: 65%;
+  margin-left: 5%;
+}
+
+.event-start-date {
+  line-height: modular-scale(18px, 2, 1.618) * 1.5;
+}
+
+.event aside p {
+  margin-top: 0;
+}
+
+.event aside h3 {
+  font-weight: normal;
+}
+
+
 /* Contact
 -------------------------------------------- */
 

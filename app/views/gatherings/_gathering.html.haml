@@ -1,9 +1,14 @@
 .event
-  .event-map
-  %h1= gathering.name
-  %h2= gathering.start_at
-  - if current_member.try(:owns?, gathering)
-    %span= link_to 'edit', [:edit, gathering]
-  %p= gathering.description
-  = participations_link_for gathering
-  .event-attending 4 attending
+  %aside
+    %h3.event-start-date= gathering.start_at.to_s(:long)
+    %p
+      = link_to gathering_path(gathering) do
+        = gathering.members.count
+        attending
+  %article
+    %h2.event-name= link_to gathering.name, gathering_path(gathering)
+    - if current_member.try(:owns?, gathering)
+      %span= link_to 'edit', [:edit, gathering]
+    %p= gathering.description
+    = participations_link_for gathering
+
