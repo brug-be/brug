@@ -8,5 +8,5 @@ Brug::Application.routes.draw do
     delete 'leave' => 'participations#leave'
   end
 
-  root 'gatherings#index'
+  root 'pages#landing'
 end

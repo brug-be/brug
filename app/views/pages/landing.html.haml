@@ -1,0 +1,10 @@
+%section#events
+  .wrapper
+    - @gatherings.each do |gathering|
+      .event
+        .event-map
+        %h1= gathering.name
+        %h2= gathering.start_at
+        %p= gathering.description
+        %a.call-to-action{:href => "#"} I'll be there!
+        .event-attending 4 attending
