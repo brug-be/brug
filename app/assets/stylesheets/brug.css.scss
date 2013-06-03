@@ -261,6 +261,50 @@ nav ul li.active:active a {
   font-weight: normal;
 }
 
+.event aside .attend-link a {
+  color: #fff;
+  margin-top: 1em;
+}
+
+.event-attendees {
+  line-height: 2;
+  margin-top: modular-scale(18px, 2, 1.618);
+  @include clearfix;
+}
+
+.event-attendees h3 {
+  margin-bottom: modular-scale(18px, 0, 1.618);
+}
+
+.event-attendees img {
+  width: modular-scale(18px, 1, 1.618);
+  height: modular-scale(18px, 1, 1.618);
+  border-radius: ceil(modular-scale(18px, 1, 1.618)/2);
+  -webkit-border-radius: ceil(modular-scale(18px, 1, 1.618)/2);
+  vertical-align: bottom;
+  margin-right: modular-scale(18px, -1, 1.618);
+}
+
+.event-attendees .attendee {
+  width: modular-scale(18px, 6, 1.618);
+  float: left;
+  margin-bottom: modular-scale(18px, -2, 1.618);
+}
+
+.event-attendees a:link,
+.event-attendees a:visited,
+.event-attendees a:hover,
+.event-attendees a:active {
+  color: $textcolor;
+  border: none;
+  line-height: modular-scale(18px, 1, 1.618);
+}
+
+.event-attendees a:hover span,
+.event-attendees a:active span {
+  border-bottom: 1px solid darken($textcolor, 10%);
+}
+
 
 /* Contact
 -------------------------------------------- */

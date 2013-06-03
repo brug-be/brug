@@ -1,9 +1,16 @@
-%section
-  .wrapper
-    %h1= @gathering.name
-    %h4.date= @gathering.start_at.to_s :long
-    %h4.location= @gathering.location
-    .descritpion= @gathering.description
-    .members
-      %h4 Members
-      = @gathering.members.pluck(:name).to_sentence
+.event
+  %aside
+    %h3.event-start-date= @gathering.start_at.to_s(:long)
+    %p.attend-link= participations_link_for @gathering
+  %article
+    %h2.event-name= link_to @gathering.name, gathering_path(@gathering)
+    - if current_member.try(:owns?, @gathering)
+      %span= link_to 'edit', [:edit, @gathering]
+    %p= @gathering.description
+    .event-attendees
+      %h3 Who's coming?
+      - @gathering.members.each do |member|
+        .attendee
+          = link_to "http://twitter.com/#{member.name}" do
+            = image_tag(member.avatar_url, height: '123')
+            %span= member.name
