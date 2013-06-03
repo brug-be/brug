@@ -1,6 +1,6 @@
 .event
   %aside
-    %h3.event-start-date= @gathering.start_at.to_s(:long)
+    %h3.event-start-date= @gathering.start_at.strftime("%B %d - %H:%M")
     %p.attend-link= participations_link_for @gathering
   %article
     %h2.event-name= link_to @gathering.name, gathering_path(@gathering)

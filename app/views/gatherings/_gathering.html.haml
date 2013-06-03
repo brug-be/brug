@@ -1,6 +1,6 @@
 .event
   %aside
-    %h3.event-start-date= gathering.start_at.to_s(:long)
+    %h3.event-start-date= gathering.start_at.strftime("%B %d - %H:%M")
     %p
       = link_to gathering_path(gathering) do
         = gathering.members.count
