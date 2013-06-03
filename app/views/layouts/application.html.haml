@@ -9,5 +9,5 @@
     = csrf_meta_tags
   %body{"data-spy" => "scroll", "data-target" => "nav"}
     %nav#navigation= render 'layouts/navigation'
-    %section= yield
+    %section.content= yield
     %section#contact= render 'layouts/footer'

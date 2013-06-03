@@ -16,6 +16,11 @@ section {
   padding: modular-scale(18px, 1, 1.618) 0;
 }
 
+section.content {
+  padding-top: modular-scale(18px, 2, 1.618);
+  margin-top: modular-scale(18px, 2, 1.618);
+}
+
 h1 {
   color: $redcolor;
   font-size: modular-scale(18px, 3, 1.618);
