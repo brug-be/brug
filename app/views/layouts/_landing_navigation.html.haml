@@ -1,8 +1,8 @@
 .wrapper
-  %span.logo-type BRUG
+  %span.logo-type= link_to 'BRUG', '#'
   %ul.nav
     %li= link_to 'Add event', [:new, :gathering]
     %li= link_to 'Events', '#events'
     %li= link_to 'Members', '#members'
+    %li= link_to 'Blog', :blog
     %li= link_to 'Contact', '#contact'
-    %li= link_to 'Blog', '/blog'
