@@ -1,0 +1,9 @@
+%section
+  .wrapper
+    %h1= @gathering.name
+    %h4.date= @gathering.start_at.to_s :long
+    %h4.location= @gathering.location
+    .descritpion= @gathering.description
+    .members
+      %h4 Members
+      = @gathering.members.pluck(:name).to_sentence

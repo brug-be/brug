@@ -5,7 +5,7 @@ class GatheringsController < ApplicationController
   end
 
   def new
-    @gathering = current_member.created_gatherings.new
+    @gathering = current_member.created_gaiderings.new
   end
 
   def create
@@ -35,6 +35,10 @@ class GatheringsController < ApplicationController
     @gathering = current_member.created_gatherings.find params[:id]
     @gathering.destroy
     redirect_to :root
+  end
+
+  def show
+    @gathering = Gathering.find params[:id]
   end
 
   private
