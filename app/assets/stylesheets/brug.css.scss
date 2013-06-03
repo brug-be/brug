@@ -49,8 +49,9 @@ h4 {
 header {
   color: #fff;
   text-align: center;
-  height: 100%;
-  // background: url('headerbg.jpg') repeat center center fixed;
+  // height: 100%;
+  background: url('header_bg.jpg') repeat-x center center fixed;
+  background-size: cover;
 }
 
 header .wrapper {
@@ -251,7 +252,7 @@ nav ul li.active:active a {
 
 #contact {
   font-size: modular-scale(18px, 2, 1.618);
-  padding: modular-scale(18px, 4, 1.618) 0;
+  padding: modular-scale(18px, 3, 1.618) 0;
   text-align: center;
   color: $redcolor;
 }
@@ -271,18 +272,20 @@ nav ul li.active:active a {
   text-align: center;
 }
 
-#members span {
-  width: modular-scale(18px, 4, 1.618);
-  height: modular-scale(18px, 4, 1.618);
-  border-radius: modular-scale(18px, 4, 1.618)/2;
-  -webkit-border-radius: modular-scale(18px, 4, 1.618)/2;
-  overflow: hidden;
-  display: inline-block;
-  margin: modular-scale(18px, -1, 1.618);
+#members h2 {
+  margin-bottom: modular-scale(18px, 2, 1.618);
 }
 
-#members span a:link,
-#members span a:visited {
+#members a:link,
+#members a:visited {
+  width: modular-scale(18px, 4, 1.618);
+  height: modular-scale(18px, 4, 1.618);
+  margin: modular-scale(18px, -1, 1.618);
+  border-radius: ceil(modular-scale(18px, 4, 1.618)/2);
+  -webkit-border-radius: ceil(modular-scale(18px, 4, 1.618)/2);
+  overflow: hidden;
+  display: inline-block;
+  border: 0;
   opacity: 0.8;
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
@@ -290,19 +293,32 @@ nav ul li.active:active a {
   -o-transition: opacity 0.5s;
 }
 
-#members span a:hover,
-#members span a:active {
+#members a:hover,
+#members a:active {
   opacity: 1;
+  border: 0;
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
 }
 
-#members span img {
+#members img {
   max-width: 100%;
 }
 
+
+/* Form
+-------------------------------------------- */
+
+section#footer {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: modular-scale(18px, 2, 1.618) 0;
+}
 
 /* Form
 -------------------------------------------- */
