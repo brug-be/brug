@@ -1,5 +1,5 @@
 .wrapper
   %h1 Belgian Ruby User Group
   %span.divider Next up
-  %h2 Ruby Ribs - July 18th, Ghent
+  %h2= Gathering.future.order('start_at ASC').first.name
   = link_to 'All events', '#events', class: 'call-to-action'
