@@ -2,7 +2,6 @@ class GatheringsController < ApplicationController
   before_filter :member_required, except: [:index]
   def index
     @gatherings = Gathering.future
-    render :layout => 'landing'
   end
 
   def new
