@@ -1,28 +1,28 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is the repo for the Belgian Ruby UserGroup website ([BRUG](http://brug.be))
+Please fork or ask for project access so we can make this even better.
 
 * Ruby version
-
-* System dependencies
+  * production runs on 1.9.3+
+  * Also works on ruby 2
 
 * Configuration
 
+Copy .env.example to .env and fill in all the keys. You need to create a twitter application at [http://dev.twitter.com/apps/new](http://dev.twitter.com/apps/new)
+
 * Database creation
 
-* Database initialization
+We used mysql, copy the config/database.yml.example to config/databae.yml, fill in all the required fields en run these defailt rails commands
+
+    rake db:create:all
+    rake db:migrate
+    rake db:seed
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+We used minitest, so just run **rake** or **rake test**
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Runs on [Openminds](http://openminds.be). Contact us if you would like to be able to deploy. We only need your public ssh key.
