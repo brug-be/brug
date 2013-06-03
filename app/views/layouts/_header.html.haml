@@ -1,5 +1,5 @@
 .wrapper
   %h1 Belgian Ruby User Group
   %span.divider Next up
-  %h2= Gathering.future.first.name
+  %h2= Gathering.future.try(:first).try(:name)
   = link_to 'All events', '#events', class: 'call-to-action'
