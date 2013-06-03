@@ -8,8 +8,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body{"data-spy" => "scroll", "data-target" => "nav"}
-    %header &nbsp;
     %nav#navigation= render 'layouts/navigation'
-    %section.content= yield
+    %section= yield
     %section#contact= render 'layouts/contact'
     %section#footer= render 'layouts/footer'
