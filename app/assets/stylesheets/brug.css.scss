@@ -1,6 +1,7 @@
 /* This uses Bourbon and a lot of modular-scale functions
 -------------------------------------------------------- */
 @import 'bourbon';
+
 $redcolor: #A60A17;
 $textcolor: #333;
 
@@ -39,6 +40,12 @@ h3 {
 h4 {
   font-size: modular-scale(18px, 0, 1.618);
   font-weight: bold;
+}
+
+p {
+  max-width: modular-scale(18px, 8, 1.618);
+  line-height: 1.6;
+  margin: 1em auto;
 }
 
 .wrapper {
@@ -259,9 +266,18 @@ nav ul li.active:active a {
 
 /* Blog
 -------------------------------------------- */
-.post h3 span{
+
+.blog .post-date {
   font-size: modular-scale(18px, 0, 1.618);
-  color: #333;
+  color: lighten($textcolor, 30%);
+  &:after {
+    content: "\2014";
+    margin: 0 0.5em;
+  }
+}
+
+.blog h1 {
+  text-align: center;
 }
 
 
@@ -322,7 +338,8 @@ section#footer {
 
 /* Form
 -------------------------------------------- */
-form label{
+
+form label {
   display: inline-block;
   width: 160px;
   padding-bottom: modular-scale(5px, 1, 1.618);
