@@ -9,5 +9,5 @@ Brug::Application.routes.draw do
   end
 
   get '/blog' => 'pages#blog'
-  root 'pages#landing'
+  root 'gatherings#index'
 end
