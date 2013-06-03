@@ -3,4 +3,7 @@ class PagesController < ApplicationController
     @gatherings = Gathering.future
     render :layout => 'landing'
   end
+
+  def blog
+  end
 end

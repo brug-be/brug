@@ -8,5 +8,6 @@ Brug::Application.routes.draw do
     get 'leave' => 'participations#leave'
   end
 
+  get '/blog' => 'pages#blog'
   root 'pages#landing'
 end

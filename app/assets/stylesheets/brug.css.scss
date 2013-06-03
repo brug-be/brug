@@ -190,6 +190,13 @@ nav ul li.active:active a {
   color: $redcolor;
 }
 
+/* Blog
+-------------------------------------------- */
+.post h3 span{
+  font-size: modular-scale(18px, 0, 1.618);
+  color: #333;
+}
+
 
 /* Members
 -------------------------------------------- */
