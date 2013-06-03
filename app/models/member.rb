@@ -16,6 +16,16 @@ class Member < ActiveRecord::Base
     end
   end
 
+  def self.create_from_username(username)
+    response = HTTParty.get("https://api.twitter.com/1/users/show.json?screen_name=#{username}").to_hash
+    create! do |member|
+      member.provider = 'twitter'
+      member.uid = response['id']
+      member.name = response['screen_name']
+      member.avatar_url = response['profile_image_url'].gsub(/_normal/, "")
+    end
+  end
+
   def owns? gathering
     created_gatherings.include? gathering
   end
