@@ -5,7 +5,7 @@ class GatheringsController < ApplicationController
   end
 
   def new
-    @gathering = current_member.created_gaiderings.new
+    @gathering = current_member.created_gatherings.new
   end
 
   def create
