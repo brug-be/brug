@@ -4,3 +4,7 @@
     %li= link_to 'Add event', [:new, :gathering]
     %li= link_to 'Events', :gatherings
     %li= link_to 'Blog', :blog
+    - if current_member
+      %li= link_to 'Sign out', signout_path
+    - else
+      %li= link_to 'Log in', '/auth/twitter'
