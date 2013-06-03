@@ -1,2 +1,3 @@
 $(document).ready ->
-  $("nav").affix offset-top: $("header").height()
+  $("nav").affix
+    offset: $("header").height()
