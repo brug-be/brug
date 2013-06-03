@@ -15,7 +15,13 @@
     %section#members= render 'layouts/members'
     %section#contact= render 'layouts/contact'
     %section#footer= render 'layouts/footer'
-    :coffee
-      $(document).ready ->
-        $("nav").affix
-          offset: $("header").height()
+    :javascript
+      $(document).ready(function(){
+        $("nav").affix({
+          offset: {
+            top: $("header").height()
+          }
+        })
+      });
+
+
