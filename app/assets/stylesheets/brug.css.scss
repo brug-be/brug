@@ -238,6 +238,15 @@ nav ul li.active:active a {
 }
 
 
+/* Form
+-------------------------------------------- */
+form label{
+  display: inline-block;
+  width: 160px;
+  padding-bottom: modular-scale(5px, 1, 1.618);
+}
+
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
   /* Styles for mobile */
