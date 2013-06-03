@@ -2,6 +2,7 @@
 -------------------------------------------------------- */
 @import 'bourbon';
 $redcolor: #A60A17;
+$textcolor: #333;
 
 html {
   height: 100%;
@@ -9,6 +10,7 @@ html {
 
 body {
   font-size: modular-scale(18px, 0, 1.618);
+  color: $textcolor;
 }
 
 section {
