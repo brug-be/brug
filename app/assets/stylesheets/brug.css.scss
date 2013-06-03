@@ -191,6 +191,46 @@ nav ul li.active:active a {
 }
 
 
+/* Members
+-------------------------------------------- */
+
+#members {
+  text-align: center;
+}
+
+#members span {
+  width: modular-scale(18px, 4, 1.618);
+  height: modular-scale(18px, 4, 1.618);
+  border-radius: modular-scale(18px, 4, 1.618)/2;
+  -webkit-border-radius: modular-scale(18px, 4, 1.618)/2;
+  overflow: hidden;
+  display: inline-block;
+  margin: modular-scale(18px, -1, 1.618);
+}
+
+#members span a:link,
+#members span a:visited {
+  opacity: 0.8;
+  transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
+
+#members span a:hover,
+#members span a:active {
+  opacity: 1;
+  transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
+
+#members span img {
+  max-width: 100%;
+}
+
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
   /* Styles for mobile */
