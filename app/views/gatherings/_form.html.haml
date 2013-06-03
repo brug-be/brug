@@ -1,6 +1,6 @@
 = simple_form_for @gathering do |form|
   = form.input :name
-  = form.input :kind
+  = form.input :kind, as: :select, collection: Gathering::KINDS
   = form.input :location
   = form.input :description, as: :text
   = form.input :start_at, as: :datetime
