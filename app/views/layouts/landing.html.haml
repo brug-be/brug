@@ -14,3 +14,7 @@
     %section#members= render 'layouts/members'
     %section#contact= render 'layouts/contact'
     %section#footer= render 'layouts/footer'
+    :coffee
+      $(document).ready ->
+        $("nav").affix
+          offset: $("header").height()
