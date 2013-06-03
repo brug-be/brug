@@ -1,3 +1,4 @@
 %wrapper
+  %h2 Our members
   - Member.all.each do |member|
     %span= link_to image_tag(member.avatar_url), "http://twitter.com/#{member.name}"
