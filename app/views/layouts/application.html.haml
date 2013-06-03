@@ -9,7 +9,8 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700'
     = csrf_meta_tags
   %body{"data-spy" => "scroll", "data-target" => "nav"}
-    %nav#navigation= render 'layouts/navigation'
+    %nav#navigation.affix= render 'layouts/navigation'
     %section= yield
     %section#contact= render 'layouts/contact'
     %section#footer= render 'layouts/footer'
+
