@@ -300,8 +300,12 @@ nav ul li.active:active a {
   margin-bottom: modular-scale(18px, 2, 1.618);
 }
 
-#members a:link,
-#members a:visited {
+#members a {
+  border: 0;
+}
+
+#members a:link img,
+#members a:visited img {
   width: modular-scale(18px, 4, 1.618);
   height: modular-scale(18px, 4, 1.618);
   margin: modular-scale(18px, -1, 1.618);
@@ -309,7 +313,6 @@ nav ul li.active:active a {
   -webkit-border-radius: ceil(modular-scale(18px, 4, 1.618)/2);
   overflow: hidden;
   display: inline-block;
-  border: 0;
   opacity: 0.8;
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
@@ -317,10 +320,9 @@ nav ul li.active:active a {
   -o-transition: opacity 0.5s;
 }
 
-#members a:hover,
-#members a:active {
+#members a:hover img,
+#members a:active img {
   opacity: 1;
-  border: 0;
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
