@@ -3,8 +3,7 @@
     %h3.event-start-date= gathering.start_at.strftime("%B %d - %H:%M")
     %p
       = link_to gathering_path(gathering) do
-        = gathering.members.count
-        attending
+        = gathering.participation
   %article
     %h2.event-name= link_to gathering.name, gathering_path(gathering)
     - if current_member.try(:owns?, gathering)
