@@ -1,6 +1,4 @@
 class Gathering < ActiveRecord::Base
-  KINDS = %w[burger beer conference hacking presentations]
-
   has_many :participations
   has_many :members, through: :participations
   belongs_to :owner, class_name: 'Member'
