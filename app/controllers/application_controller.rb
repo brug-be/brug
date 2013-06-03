@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_member
 
   def member_required
-    redirect_to :root unless current_member.present?
+    session[:awesome_redirect] = request.fullpath
+    redirect_to '/auth/twitter' unless current_member.present?
   end
 end

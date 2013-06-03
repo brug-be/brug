@@ -4,8 +4,8 @@ Brug::Application.routes.draw do
   get 'signout' => 'sessions#destroy', as: 'signout'
 
   resources :gatherings do
-    post 'join' => 'participations#join'
-    delete 'leave' => 'participations#leave'
+    get 'join' => 'participations#join'
+    get 'leave' => 'participations#leave'
   end
 
   root 'pages#landing'
