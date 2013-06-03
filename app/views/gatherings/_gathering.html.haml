@@ -8,7 +8,7 @@
   %article
     %h2.event-name= link_to gathering.name, gathering_path(gathering)
     - if current_member.try(:owns?, gathering)
-      %span= link_to 'edit', [:edit, gathering]
+      %span.event-edit= link_to 'edit', [:edit, gathering]
     %p= gathering.description
     = participations_link_for gathering
 

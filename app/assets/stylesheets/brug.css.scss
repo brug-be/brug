@@ -212,6 +212,14 @@ nav ul li.active:active a {
   margin: modular-scale(18px, 3, 1.618) auto;
 }
 
+.event .event-name {
+  display: inline-block;
+}
+
+.event .event-edit a {
+  border: 0;
+}
+
 .event .event-name a:link,
 .event .event-name a:visited {
   color: $textcolor;
