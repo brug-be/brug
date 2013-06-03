@@ -155,6 +155,10 @@ nav .logo-type {
   margin-top: modular-scale(18px, 2, 1.618)/2;
 }
 
+nav .logo-type a{
+  border-bottom: none;
+}
+
 nav ul {
   display: inline-block;
   text-align: right;
