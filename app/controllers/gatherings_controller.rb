@@ -1,5 +1,5 @@
 class GatheringsController < ApplicationController
-  before_filter :member_required, except: [:index]
+  before_filter :member_required, except: [:index, :show]
   def index
     @gatherings = Gathering.future
     @next_gathering = @gatherings.try(:first)
