@@ -7,4 +7,12 @@ module ApplicationHelper
       link_to "I'll be there!", [gathering, :join], class: 'call-to-action'
     end
   end
+
+  def participation(gathering)
+    if (gathering.members_count == 0)
+      'No one is attending yet'
+    else
+      "#{pluralize(gathering.members_count, 'person')} attending"
+    end
+  end
 end

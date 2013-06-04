@@ -8,7 +8,7 @@
       %span.event-edit= link_to 'edit', [:edit, @gathering]
     %p= @gathering.description
     .event-attendees
-      %h3= @gathering.participation
+      %h3= participation(@gathering)
       - @gathering.members.each do |member|
         .attendee
           = link_to "http://twitter.com/#{member.name}" do
