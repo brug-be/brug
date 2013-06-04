@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130605183030) do
+ActiveRecord::Schema.define(version: 20130605183031) do
 
   create_table "gatherings", force: true do |t|
     t.string   "name",        null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20130605183030) do
     t.datetime "updated_at"
     t.integer  "owner_id",    null: false
     t.string   "slug"
+    t.string   "url"
   end
 
   add_index "gatherings", ["slug"], name: "index_gatherings_on_slug", unique: true, using: :btree

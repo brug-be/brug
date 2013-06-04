@@ -45,6 +45,6 @@ class GatheringsController < ApplicationController
 
   private
   def gathering_params
-    params.require(:gathering).permit(:name, :location, :kind, :description, :start_at)
+    params.require(:gathering).permit(:name, :location, :kind, :description, :start_at, :url)
   end
 end

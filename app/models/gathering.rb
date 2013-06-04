@@ -9,6 +9,8 @@ class Gathering < ActiveRecord::Base
 
   validates_presence_of :name, :location, :start_at, :description, :kind
 
+  validates :url, format: {allow_blank: true, with: URI::regexp(%w(http https))}
+
   friendly_id :name, use: :slugged
 
   def members_count
