@@ -16,11 +16,11 @@ describe Gathering do
     gathering.members.count.must_equal 3
   end
 
-  it "has a futur scope" do
+  it "has a future scope" do
     Gathering.destroy_all
     # today
     Gathering.create!(name: 'Burgers!', location: 'Brussels', description: 'Omnomnomnom', start_at: Time.current, kind: 'food', owner: Member.first)
-    # futur
+    # future
     3.times do |i|
       Gathering.create!(name: "Burgers! #{i}", location: 'Brussels', description: 'Omnomnomnom', start_at: 2.days.from_now, kind: 'food', owner: Member.first)
     end
@@ -29,6 +29,6 @@ describe Gathering do
       Gathering.create!(name: "Burgers! #{i}", location: 'Brussels', description: 'Omnomnomnom', start_at: 2.days.ago, kind: 'food', owner: Member.first)
     end
 
-    Gathering.futur.count.must_equal 4
+    Gathering.future.count.must_equal 4
   end
 end

@@ -7,6 +7,8 @@
     - if current_member.try(:owns?, @gathering)
       %span.event-edit= link_to 'edit', [:edit, @gathering]
     %p= @gathering.description
+    - unless @gathering.url.blank?
+      %p= link_to(@gathering.url, @gathering.url)
     .event-attendees
       %h3= participation(@gathering)
       - @gathering.members.each do |member|
