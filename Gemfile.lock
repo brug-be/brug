@@ -1,5 +1,12 @@
 GIT
-  remote: git@github.com:plataformatec/simple_form.git
+  remote: git://github.com/FriendlyId/friendly_id.git
+  revision: 78d639d67a17135fe5e3b9731fd4328c315c74b1
+  branch: rails4
+  specs:
+    friendly_id (4.1.0.beta.2)
+
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
   revision: d75963307f3a9aa7884cff8d5ad228f65e94d343
   specs:
     simple_form (3.0.0.rc)
@@ -183,6 +190,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner (~> 1.0.1)
   dotenv-rails
+  friendly_id!
   haml-rails
   httparty (~> 0.11.0)
   jquery-rails (= 2.1.4)

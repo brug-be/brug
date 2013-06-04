@@ -15,8 +15,9 @@ gem 'haml-rails'
 gem 'httparty', '~> 0.11.0'
 gem 'jquery-rails', '2.1.4'
 gem 'omniauth-twitter'
-gem "redcarpet", "~> 2.3.0"
-gem "simple_form", git: 'git@github.com:plataformatec/simple_form.git'
+gem 'redcarpet', '~> 2.3.0'
+gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'rails4'
+gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'turbolinks'
 
 # Gems used only for assets and not required
@@ -33,7 +34,7 @@ end
 group :test do
   gem 'capo'
   gem 'capybara'
-  gem "database_cleaner", "~> 1.0.1"
+  gem 'database_cleaner', '~> 1.0.1'
   gem 'minitest'
   gem 'sqlite3'
   gem 'turn'
