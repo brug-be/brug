@@ -15,4 +15,9 @@ module ApplicationHelper
       "#{pluralize(gathering.members_count, 'person')} attending"
     end
   end
+
+  def svg(url, options = {})
+    content_tag(:object, nil, options.merge(data: url, type: "image/svg+xml"))
+  end
+
 end
