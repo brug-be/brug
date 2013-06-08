@@ -22,6 +22,11 @@ describe GatheringsHelper do
       gathering_kind_icon(@gathering).must_match /\<object.*drinkup\.svg/
     end
 
+    it "includes an image as fallback for browser which do not support SVG" do
+      skip("TODO")
+      gathering_kind_icon(@gathering).must_match /drinkup\.png/
+    end
+
   end
 
 end
