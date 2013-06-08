@@ -3,4 +3,15 @@
     %h3.profile-name= @member.name
     %p.profile-image= image_tag(@member.avatar_url, height: '123')
   %article
-    %h2.event-name Activity
+    - if @member.gatherings.future.any?
+      %h3 Upcoming gatherings
+      - @member.gatherings.future.each do |gathering|
+        %p
+          = link_to gathering.name, gathering
+          = gathering.start_at.to_date.to_s :db
+    - elsif @member.gatherings.past.any?
+      %h3 Past gatherings
+      - @member.gatherings.past.each do |gathering|
+        %p= link_to gathering.name, gathering
+    - else
+      %p Not yet participated in any gatherings
