@@ -1,11 +1,9 @@
 .wrapper
   %span.logo-type= link_to 'BRUG', :root
   %ul.nav
-    %li= link_to 'Add event', [:new, :gathering]
     %li= link_to 'Events', '#events'
     %li= link_to 'Members', '#members'
     %li= link_to 'Blog', :blog
-    %li= link_to 'Contact', '#contact'
     - if current_member
       %li= link_to 'Sign out', signout_path
     - else
