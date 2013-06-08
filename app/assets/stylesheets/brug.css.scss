@@ -207,6 +207,11 @@ nav ul li.active:active a {
 /* Events
 -------------------------------------------- */
 
+#events h1 {
+  margin-left: 35%;
+  display: inline-block;
+}
+
 .event {
   @include clearfix;
   margin: modular-scale(18px, 3, 1.618) auto;
