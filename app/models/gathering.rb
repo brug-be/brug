@@ -1,7 +1,7 @@
 class Gathering < ActiveRecord::Base
   extend FriendlyId
 
-  has_many :participations
+  has_many :participations, dependent: :destroy
   has_many :members, through: :participations
   belongs_to :owner, class_name: 'Member'
 

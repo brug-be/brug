@@ -262,7 +262,7 @@ nav ul li.active:active a {
   margin-left: 5%;
 }
 
-.event-start-date {
+.event-start-date, .profile-name {
   line-height: modular-scale(18px, 2, 1.618) * 1.5;
 }
 
@@ -411,6 +411,20 @@ form label {
   width: 160px;
   padding-bottom: modular-scale(5px, 1, 1.618);
 }
+
+
+/* Profile
+-------------------------------------------- */
+
+.profile-image img {
+  width: modular-scale(18px, 2, 1.618);
+  height: modular-scale(18px, 2, 1.618);
+  border-radius: ceil(modular-scale(18px, 2, 1.618)/2);
+  -webkit-border-radius: ceil(modular-scale(18px, 2, 1.618)/2);
+  vertical-align: bottom;
+  margin-right: modular-scale(18px, -1, 1.618);
+}
+
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
