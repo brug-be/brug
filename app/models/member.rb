@@ -1,7 +1,9 @@
 class Member < ActiveRecord::Base
   has_many :participations, dependent: :destroy
   has_many :gatherings, through: :participations
-  has_many :created_gatherings, class_name: 'Gathering', foreign_key: 'owner_id', dependent: :nullify
+  has_many :created_gatherings, class_name: 'Gathering', foreign_key: 'owner_id'
+
+  after_destroy :change_ownership_created_gatherings
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
@@ -28,5 +30,10 @@ class Member < ActiveRecord::Base
 
   def owns? gathering
     created_gatherings.include? gathering
+  end
+
+  private
+  def change_ownership_created_gatherings
+    created_gatherings.update_all owner_id: Member.first.id
   end
 end

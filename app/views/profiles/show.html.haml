@@ -2,6 +2,9 @@
   %aside
     %h3.profile-name= @member.name
     %p.profile-image= image_tag(@member.avatar_url, height: '123')
+    %p.actions
+      = link_to 'edit', [:edit, :profile]
+      = link_to 'delete account', :profile, method: :delete, confirm: 'Are you really sure? This will delete all you activity except the gathering you created.'
   %article
     - if @member.gatherings.future.any?
       %h3 Upcoming gatherings
