@@ -17,7 +17,12 @@ module ApplicationHelper
   end
 
   def svg(url, options = {})
-    content_tag(:object, nil, options.merge(data: url, type: "image/svg+xml"))
+    if src = options.delete(:fallback)
+      img = image_tag(src)
+    else
+      img = nil
+    end
+    content_tag(:object, img, options.merge(data: url, type: "image/svg+xml"))
   end
 
 end

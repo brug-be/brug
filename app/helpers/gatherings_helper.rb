@@ -5,7 +5,8 @@ module GatheringsHelper
   end
 
   def gathering_kind_icon(gathering)
-    svg(image_path("gathering_kind_icons/#{gathering.kind.parameterize}.svg"))
+    basepath = "gathering_kind_icons/#{gathering.kind.parameterize}"
+    svg(image_path("#{basepath}.svg"), fallback: "#{basepath}.png")
   end
 
 end
