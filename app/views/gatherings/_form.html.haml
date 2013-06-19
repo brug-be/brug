@@ -1,6 +1,6 @@
 = simple_form_for @gathering do |form|
   = form.input :name
-  = form.input :kind, as: :select, collection: %w[burger beer conference hacking presentations]
+  = form.input :kind, as: :select, collection: GatheringKind.all
   = form.input :location
   = form.input :description, as: :text
   = form.input :start_at, as: :datetime
