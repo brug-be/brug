@@ -354,17 +354,17 @@ nav ul li.active:active a {
 
 #members a {
   border: 0;
-}
-
-#members a:link img,
-#members a:visited img {
+  display: inline-block;
   width: modular-scale(18px, 4, 1.618);
   height: modular-scale(18px, 4, 1.618);
-  margin: modular-scale(18px, -1, 1.618);
+  background-size: cover;
   border-radius: ceil(modular-scale(18px, 4, 1.618)/2);
   -webkit-border-radius: ceil(modular-scale(18px, 4, 1.618)/2);
   overflow: hidden;
-  display: inline-block;
+}
+
+#members a:link,
+#members a:visited {
   opacity: 0.8;
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
@@ -372,19 +372,14 @@ nav ul li.active:active a {
   -o-transition: opacity 0.5s;
 }
 
-#members a:hover img,
-#members a:active img {
+#members a:hover,
+#members a:active {
   opacity: 1;
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
 }
-
-#members img {
-  max-width: 100%;
-}
-
 
 /* Form
 -------------------------------------------- */
