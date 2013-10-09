@@ -12,7 +12,7 @@ class Gathering < ActiveRecord::Base
 
   validates :url, format: {allow_blank: true, with: URI::regexp(%w(http https))}
 
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
   def members_count
     members.count
