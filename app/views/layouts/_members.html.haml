@@ -1,4 +1,4 @@
 %wrapper
   %h2 Our members
   - Member.all.each do |member|
-    = link_to image_tag(member.avatar_url, height: '123'), "http://twitter.com/#{member.name}"
+    = link_to '', "http://twitter.com/#{member.name}", style: "background-image: url(#{image_url(member.avatar_url, height: '123')})"
