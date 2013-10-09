@@ -5,27 +5,27 @@ end
 
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 gem 'mysql2'
 
 gem 'bourbon', '~> 3.1.6'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'dotenv-rails'
-gem 'haml-rails'
+gem 'haml-rails', github: 'indirect/haml-rails'
 gem 'httparty', '~> 0.11.0'
 gem 'jquery-rails', '2.1.4'
 gem 'omniauth-twitter'
-gem 'redcarpet', '~> 2.3.0'
-gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'rails4'
-gem 'simple_form', github: 'plataformatec/simple_form'
+gem 'redcarpet', '~> 3.0.0'
+gem 'friendly_id', '~> 5.0.0.rc1'
+gem 'simple_form', '~> 3.0.0'
 gem 'turbolinks'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '~> 4.0.0.rc1'
-  gem 'therubyracer'
-  gem 'uglifier', '>= 1.3.0'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'therubyracer', '~> 0.12.0'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 group :development do
@@ -33,8 +33,8 @@ end
 
 group :test do
   gem 'capo'
-  gem 'capybara'
-  gem 'database_cleaner', '~> 1.0.1'
+  gem 'capybara', '~> 2.1.0'
+  gem 'database_cleaner', '~> 1.1.1'
   gem 'minitest'
   gem 'sqlite3'
   gem 'turn'
