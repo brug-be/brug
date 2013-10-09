@@ -29,10 +29,11 @@ group :assets do
 end
 
 group :development do
+  gem 'capistrano', '~> 2.15.5'
+  gem 'capo', '~> 0.9.2', require: false
 end
 
 group :test do
-  gem 'capo'
   gem 'capybara', '~> 2.1.0'
   gem 'database_cleaner', '~> 1.1.1'
   gem 'minitest'
