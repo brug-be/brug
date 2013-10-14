@@ -3,7 +3,7 @@ class ParticipationsController < ApplicationController
 
   def join
     @gathering = Gathering.find params[:gathering_id]
-    @gathering.members << current_member
+    @gathering.members << current_member unless @gathering.members.include? current_member
     redirect_to :root
   end
 
