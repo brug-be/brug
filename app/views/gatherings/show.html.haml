@@ -16,7 +16,7 @@
     .event-attendees
       %h3= participation(@gathering)
       - @gathering.members.each do |member|
-        .attendee
+        .attendee{class: ('owner' if member == @gathering.owner)}
           = link_to "http://twitter.com/#{member.name}" do
             = image_tag(member.avatar_url, height: '123')
             %span= member.name

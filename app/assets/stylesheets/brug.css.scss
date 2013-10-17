@@ -304,6 +304,10 @@ nav ul li.active:active a {
   margin-bottom: modular-scale(18px, -2, 1.618);
 }
 
+.event-attendees .owner {
+  font-weight: bold;
+}
+
 .event-attendees a:link,
 .event-attendees a:visited,
 .event-attendees a:hover,
