@@ -318,6 +318,11 @@ nav ul li.active:active a {
   border-bottom: 1px solid darken($textcolor, 10%);
 }
 
+.event p.location {
+  font-size: modular-scale(12px, 1, 1.618);
+  margin-top: 6px
+}
+
 
 /* Contact
 -------------------------------------------- */

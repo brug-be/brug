@@ -6,6 +6,9 @@
     = gathering_kind_icon(gathering)
   %article
     %h2.event-name= link_to gathering.name, gathering_path(gathering)
+    %p.location
+      = svg(image_path("location.svg"), fallback: "location.png", width: 20, height: 28)
+      = gathering.location
     - if current_member.try(:owns?, gathering)
       %span.event-edit= link_to 'edit', [:edit, gathering]
     %p= gathering.description
