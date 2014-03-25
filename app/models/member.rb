@@ -32,6 +32,22 @@ class Member < ActiveRecord::Base
     created_gatherings.include? gathering
   end
 
+  def update_twitter_info
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_KEY']
+      config.consumer_secret     = ENV['TWITTER_SECRET']
+      config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
+      config.access_token_secret = ENV['TWITTER_ACCESS_SECRET']
+    end
+    begin
+      if avatar = client.user(name).try(:profile_image_url).try(:to_s).try(:gsub, /_normal/, '')
+        update_column :avatar_url, avatar
+      end
+    rescue Twitter::Error::NotFound
+      self.destroy
+    end
+  end
+
   private
   def change_ownership_created_gatherings
     created_gatherings.update_all owner_id: Member.first.id

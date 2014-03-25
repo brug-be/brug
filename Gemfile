@@ -19,6 +19,8 @@ gem 'redcarpet', '~> 3.0.0'
 gem 'friendly_id', '~> 5.0.0.rc1'
 gem 'simple_form', '~> 3.0.0'
 gem 'turbolinks'
+gem 'twitter', '~> 5.8.0'
+gem 'whenever', '~> 0.9.2', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
