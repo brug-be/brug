@@ -5,7 +5,7 @@ end
 
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 gem 'mysql2'
 
 gem 'bourbon', '~> 3.1.6'
