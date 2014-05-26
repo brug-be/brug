@@ -19,12 +19,13 @@ class Member < ActiveRecord::Base
   end
 
   def self.create_from_username(username)
-    response = HTTParty.get("https://api.twitter.com/1/users/show.json?screen_name=#{username}").to_hash
+    user_data = TwitterClient.call.user(username).to_hash
+
     create! do |member|
       member.provider = 'twitter'
-      member.uid = response['id']
-      member.name = response['screen_name']
-      member.avatar_url = response['profile_image_url'].gsub(/_normal/, "")
+      member.uid = user_data[:id]
+      member.name = user_data[:screen_name]
+      member.avatar_url = user_data[:profile_image_url].gsub(/_normal/, "")
     end
   end
 
@@ -33,14 +34,8 @@ class Member < ActiveRecord::Base
   end
 
   def update_twitter_info
-    client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV['TWITTER_KEY']
-      config.consumer_secret     = ENV['TWITTER_SECRET']
-      config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
-      config.access_token_secret = ENV['TWITTER_ACCESS_SECRET']
-    end
     begin
-      if avatar = client.user(name).try(:profile_image_url).try(:to_s).try(:gsub, /_normal/, '')
+      if avatar = TwitterClient.call.user(name).try(:profile_image_url).try(:to_s).try(:gsub, /_normal/, '')
         update_column :avatar_url, avatar
       end
     rescue Twitter::Error::NotFound
