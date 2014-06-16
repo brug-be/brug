@@ -12,6 +12,7 @@ Brug::Application.routes.draw do
 
   get '/blog'  => 'pages#blog'
   get '/about' => 'pages#about'
+  get '/community' => 'pages#community'
 
   root 'gatherings#index'
 end
