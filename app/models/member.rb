@@ -16,6 +16,7 @@ class Member < ActiveRecord::Base
       member.name = auth["info"]["nickname"]
       member.avatar_url = auth["info"]["image"].gsub(/_normal/, "")
     end
+    ActionController::Base.expire_fragment('members')
   end
 
   def self.create_from_username(username)
