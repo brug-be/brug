@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def meetup_events
-    json = HTTParty.get("https://api.meetup.com/2/events?&sign=true&photo-host=public&group_id=15138792,12922902,5356052&page=20&key=#{ENV['MEETUP_API_KEY']}").body
-    @meetup_events ||= JSON.parse(json)['results']
+    @meetup_events ||= MeetupEvent.all
   end
   helper_method :meetup_events
 
