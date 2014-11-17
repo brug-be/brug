@@ -29,3 +29,7 @@ We used minitest, so just run **rake** or **rake test**
 * Deployment instructions
 
 Runs on [Openminds](http://openminds.be). Contact us if you would like to be able to deploy. We only need your public ssh key.
+
+[![PullReview
+stats](https://www.pullreview.com/github/brug-be/brug/badges/master.svg?)](https://www.pullreview.com/github/brug-be/brug/reviews/master)
+
