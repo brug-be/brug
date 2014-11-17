@@ -1,4 +1,19 @@
 %section#events
   .wrapper
-    %h1 All events
-    = render @gatherings
+    - if meetup_events
+      %h1 All events
+      - meetup_events.each do |event|
+        .event{class: 'kind-user-group' }
+          %aside
+            %h3.event-start-date= Time.at(event['time'].to_i / 1000).to_datetime.to_s(:db)
+            %p
+              = link_to pluralize(event['yes_rsvp_count'].to_i, 'participant'), event['event_url']
+          %article
+            %h2.event-name= event['name']
+            %p.location
+              = svg(image_path("location.svg"), fallback: "location.png", width: 20, height: 28)
+              = event['venue']['name']
+              = event['venue']['address_1']
+            %p= raw event['description']
+    - else
+      %h2{style: 'text-align:center'} No futur events planned
