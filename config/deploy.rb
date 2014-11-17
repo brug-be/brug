@@ -2,7 +2,7 @@ server "pro-009.openminds.be", :app, :web, :db, primary: true
 
 set :user, 'brug'
 set :application, "brug"
-set :repository,  "git@github.com:arrrrcamp/brug.git"
+set :repository,  "git@github.com:brug-be/brug.git"
 set :branch,      "master"
 
 set :configs, %w[database]
