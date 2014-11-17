@@ -3,7 +3,6 @@ class GatheringsController < ApplicationController
   def index
     @gatherings = Gathering.future
     @next_gathering = @gatherings.try(:first)
-    render :layout => 'landing'
   end
 
   def new
