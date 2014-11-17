@@ -1,18 +1,10 @@
-layou.event
+.event
   %aside
     %h3.profile-name= @member.name
     %p.profile-image= image_tag(@member.avatar_url, height: '123')
     %p.actions
       = link_to 'delete account', :profile, method: :delete, confirm: 'Are you really sure? This will delete all you activity except the gathering you created.'
   %article
-    %h3 Upcoming gatherings
-    - if @member.gatherings.future.any?
-      - @member.gatherings.future.each do |gathering|
-        %p
-          = link_to gathering.name, gathering
-          = gathering.start_at.to_date.to_s :db
-    - else
-      %p.empty Nothing planned.
     %h3 Past gatherings
     - if @member.gatherings.past.any?
       - @member.gatherings.past.each do |gathering|
