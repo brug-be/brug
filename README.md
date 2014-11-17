@@ -9,7 +9,10 @@ Please fork or ask for project access so we can make this even better.
 
 * Configuration
 
-Copy .env.example to .env and fill in all the keys. You need to create a twitter application at [http://dev.twitter.com/apps/new](http://dev.twitter.com/apps/new)
+Copy .env.example to .env and fill in all the keys.
+
+* You need to create a twitter application at [http://dev.twitter.com/apps/new](http://dev.twitter.com/apps/new)
+* You will also need a meetup api key to fetch all upcoming events. Get yours at https://secure.meetup.com/meetup_api/key/
 
 * Database creation
 
