@@ -1,6 +1,6 @@
-server "pro-008.openminds.be", :app, :web, :db, primary: true
+server "pro-009.openminds.be", :app, :web, :db, primary: true
 
-set :user, 'arrrrcamp4'
+set :user, 'brug'
 set :application, "brug"
 set :repository,  "git@github.com:arrrrcamp/brug.git"
 set :branch,      "master"
