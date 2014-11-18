@@ -52,7 +52,6 @@ group :test do
   gem 'database_cleaner',   '~> 1.1.1'
   gem 'minitest'
   gem 'sqlite3'
-  gem 'turn'
 end
 
 group :development, :test do
