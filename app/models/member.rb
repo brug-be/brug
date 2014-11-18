@@ -16,7 +16,6 @@ class Member < ActiveRecord::Base
       member.name = auth["info"]["nickname"]
       member.avatar_url = auth["info"]["image"].gsub(/_normal/, "")
     end
-    ActionController::Base.expire_fragment('members')
   end
 
   def self.create_from_username(username)
@@ -42,6 +41,10 @@ class Member < ActiveRecord::Base
     rescue Twitter::Error::NotFound
       self.destroy
     end
+  end
+
+  def self.cache_key
+    "#{model_name.plural}/#{Digest::MD5.hexdigest(all.to_sql)}-#{count}-#{maximum(:updated_at).try(:utc).try(:to_s, :number)}"
   end
 
   private
