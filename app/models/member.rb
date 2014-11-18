@@ -6,7 +6,7 @@ class Member < ActiveRecord::Base
   after_destroy :change_ownership_created_gatherings
 
   def self.from_omniauth(auth)
-    where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+    where(auth.to_h.slice("provider", "uid")).first || create_from_omniauth(auth)
   end
 
   def self.create_from_omniauth(auth)
