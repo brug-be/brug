@@ -25,5 +25,3 @@ class MiniTest::Spec
     DatabaseCleaner.clean
   end
 end
-
-Turn.config.format = :outline

@@ -1,5 +1,5 @@
 %wrapper
   %h2 Our members
-  - cache 'members' do
+  - cache Member.all.cache_key do
     - Member.all.each do |member|
       = link_to '', "http://twitter.com/#{member.name}", style: "background-image: url(#{image_url(member.avatar_url, height: '123')})"
