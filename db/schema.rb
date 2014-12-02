@@ -11,22 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130605183031) do
-
-  create_table "gatherings", force: true do |t|
-    t.string   "name",        null: false
-    t.string   "location",    null: false
-    t.text     "description", null: false
-    t.string   "kind",        null: false
-    t.datetime "start_at",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "owner_id",    null: false
-    t.string   "slug"
-    t.string   "url"
-  end
-
-  add_index "gatherings", ["slug"], name: "index_gatherings_on_slug", unique: true, using: :btree
+ActiveRecord::Schema.define(version: 20141202211516) do
 
   create_table "members", force: true do |t|
     t.string   "provider",   null: false
@@ -35,13 +20,6 @@ ActiveRecord::Schema.define(version: 20130605183031) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_url"
-  end
-
-  create_table "participations", force: true do |t|
-    t.integer  "member_id",    null: false
-    t.integer  "gathering_id", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
