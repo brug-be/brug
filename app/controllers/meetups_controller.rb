@@ -4,7 +4,6 @@ class MeetupsController < ApplicationController
   end
 
   private
-  
   def meetup_events
     Rails.cache.fetch(expires_in: 1.hour) do
       MeetupEvent.all
