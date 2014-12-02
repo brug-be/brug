@@ -17,11 +17,9 @@ describe MeetupEvent do
 
   describe 'when parsing Meetup JSON payload' do
     let(:event) do
-      event = nil
       HTTParty.stub(:get, json_payload) do
-        event = MeetupEvent.all.first
+        MeetupEvent.all.first
       end
-      event
     end
 
     it 'gets the name' do
