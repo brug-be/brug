@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "status": "upcoming",
+      "visibility": "public",
+      "maybe_rsvp_count": 0,
+      "venue": {
+        "id": 23436562,
+        "lon": 4.4002,
+        "repinned": false,
+        "name": "Cafetaria at BetaCowork / ICAB",
+        "address_1": "4 Rue des Pères Blancs, 1040 Etterbeek",
+        "lat": 50.82674,
+        "country": "be",
+        "city": "Brussels"
+      },
+      "id": "218744835",
+      "utc_offset": 3600000,
+      "time": 1417543200000,
+      "waitlist_count": 0,
+      "announced": true,
+      "updated": 1416482128000,
+      "yes_rsvp_count": 12,
+      "created": 1416264949000,
+      "event_url": "http://www.meetup.com/brug__/events/218744835/",
+      "description": "<p>Cold, dark, early dusk -<br/>Enter, get shelter with us<br/>Rubies are shining.</p> <p>\n\n\nLet's code together. It's simple: bring your current code problem, code on an open source project, or just come to help.</p> <p>Catering: pizzas and drinks, 10 Euros</p> <p><br/>Don't hesitate to share in the comments what you'd like to work on, I list them below.</p> <p><br/>List of projects:</p> <p>• ...</p>",
+      "name": "BRUG December 2014: Hack evening",
+      "headcount": 0,
+      "group": {
+        "id": 15138792,
+        "created": 1403000188000,
+        "group_lat": 50.83000183105469,
+        "name": "BRUG",
+        "group_lon": 4.329999923706055,
+        "join_mode": "open",
+        "urlname": "brug__",
+        "who": "Rubyists"
+      }
+    }
+  ],
+  "meta": {
+    "lon": "",
+    "count": 1,
+    "signed_url": "http://api.meetup.com/2/events?group_id=15138792%2C12922902%2C5356052&status=upcoming&order=time&limited_events=False&desc=false&offset=0&photo-host=public&format=json&page=20&fields=&sig_id=30024962&sig=b51f2bf3a7ce271ea4b33367d916e029a78a6790",
+    "link": "https://api.meetup.com/2/events",
+    "next": "",
+    "total_count": 1,
+    "url": "https://api.meetup.com/2/events?key=6355562c756f4c7867101265351b57&group_id=15138792%2C12922902%2C5356052&status=upcoming&order=time&limited_events=False&desc=false&offset=0&photo-host=public&format=json&page=20&fields=&sign=True",
+    "id": "",
+    "title": "Meetup Events v2",
+    "updated": 1416482128000,
+    "description": "Access Meetup events using a group, member, or event id. Events in private groups are available only to authenticated members of those groups. To search events by topic or location, see [Open Events](/meetup_api/docs/2/open_events).",
+    "method": "Events",
+    "lat": ""
+  }
+}

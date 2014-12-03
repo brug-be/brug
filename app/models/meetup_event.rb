@@ -1,14 +1,14 @@
 class MeetupEvent
-  attr_accessor :name, :description, :time, :attendees, :venue, :address, :url
+  attr_reader :name, :description, :time, :attendees, :venue, :address, :url
 
   def initialize(attrs)
-    self.name = attrs[:name]
-    self.description = attrs[:description]
-    self.time = Time.at(attrs[:time] / 1000).to_datetime
-    self.attendees = attrs[:attendees]
-    self.address = attrs[:address]
-    self.venue = attrs[:venue]
-    self.url = attrs[:url]
+    @name = attrs[:name]
+    @description = attrs[:description]
+    @time = Time.at(attrs[:time] / 1000).to_datetime
+    @attendees = attrs[:attendees]
+    @address = attrs[:address]
+    @venue = attrs[:venue]
+    @url = attrs[:url]
   end
 
   class << self
