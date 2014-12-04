@@ -1,0 +1,20 @@
+%section#events
+  .wrapper
+    - if @meetup_events.any?
+      %h1 All events
+      - @meetup_events.each do |event|
+        .event.kind-user-group
+          %aside
+            %h3.event-start-date= event.time.to_s(:db)
+            %p
+              = link_to pluralize(event.attendees, 'participant'), event.url
+          %article
+            %h2.event-name= event.name
+            %p= link_to 'View on Meetup', event.url
+            %p.location
+              = svg(image_path("location.svg"), fallback: "location.png", width: 20, height: 28)
+              = event.venue
+              = event.address
+            %p= raw event.description
+    - else
+      %h2{style: 'text-align:center'} No future events planned
