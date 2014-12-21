@@ -29,7 +29,7 @@ class Member < ActiveRecord::Base
     end
   end
 
-  def owns? gathering
+  def owns?(gathering)
     created_gatherings.include? gathering
   end
 
