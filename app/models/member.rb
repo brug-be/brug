@@ -34,13 +34,10 @@ class Member < ActiveRecord::Base
   end
 
   def update_twitter_info
-    begin
-      if avatar = TwitterClient.call.user(name).try(:profile_image_url).try(:to_s).try(:gsub, /_normal/, '')
-        update_column :avatar_url, avatar
-      end
-    rescue Twitter::Error::NotFound
-      self.destroy
-    end
+    avatar = TwitterClient.call.user(name).try(:profile_image_url).try(:to_s).try(:gsub, /_normal/, '')
+    update_column :avatar_url, avatar if avatar 
+  rescue Twitter::Error::NotFound
+    self.destroy
   end
 
   def self.cache_key

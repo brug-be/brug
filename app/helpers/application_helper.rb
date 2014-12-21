@@ -17,7 +17,8 @@ module ApplicationHelper
   end
 
   def svg(url, options = {})
-    if src = options.delete(:fallback)
+    src = options.delete(:fallback)
+    if src
       img = image_tag(src)
     else
       img = nil
