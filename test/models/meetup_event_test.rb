@@ -47,7 +47,7 @@ describe MeetupEvent do
     end
 
     it 'gets the time' do
-      event.time.must_equal Time.at(1417543200000 / 1000).to_datetime
+      event.time.must_equal Time.at(1_417_543_200_000 / 1000).to_datetime
     end
   end
 end
