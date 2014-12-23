@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def participations_link_for gathering
+  def participations_link_for(gathering)
     case
     when current_member && gathering.members.include?(current_member)
       link_to "I'm out", [gathering, :leave], class: 'call-to-action'
@@ -17,7 +17,8 @@ module ApplicationHelper
   end
 
   def svg(url, options = {})
-    if src = options.delete(:fallback)
+    src = options.delete(:fallback)
+    if src
       img = image_tag(src)
     else
       img = nil
