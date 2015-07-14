@@ -11,7 +11,7 @@ describe MeetupEvent do
 
   it 'retrieves all BRUG events from Meetup' do
     HTTParty.stub(:get, json_payload) do
-      MeetupEvent.all.count.must_equal 1
+      MeetupEvent.all.count.must_equal 2
     end
   end
 
@@ -48,6 +48,22 @@ describe MeetupEvent do
 
     it 'gets the time' do
       event.time.must_equal Time.at(1_417_543_200_000 / 1000).to_datetime
+    end
+  end
+
+  describe 'when parsing Meetup JSON payload with empty venue' do
+    let(:event) do
+      HTTParty.stub(:get, json_payload) do
+        MeetupEvent.all.last
+      end
+    end
+
+    it 'gets a default name' do
+      event.venue.must_equal "None"
+    end
+
+    it 'gets a empty address' do
+      event.address.must_equal ""
     end
   end
 end

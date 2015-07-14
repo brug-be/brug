@@ -36,6 +36,25 @@
         "urlname": "brug__",
         "who": "Rubyists"
       }
+    },
+    {
+      "utc_offset":7200000,
+      "headcount":0,
+      "visibility":"public",
+      "waitlist_count":0,
+      "created":1435654516000,
+      "maybe_rsvp_count":0,
+      "description":"Let's code together.",
+      "event_url":"http://www.meetup.com/brug__/events/223598126/",
+      "yes_rsvp_count":15,
+      "duration":14400000,
+      "announced":true,
+      "name":"BRUG July 2015: Hack Evening",
+      "id":"223598126",
+      "time":1436889600000,
+      "updated":1435657051000,
+      "group":{"join_mode":"open","created":1403000188000,"name":"BRUG","group_lon":4.329999923706055,"id":15138792,"urlname":"brug__","group_lat":50.83000183105469,"who":"Rubyists"},
+      "status":"upcoming"
     }
   ],
   "meta": {
