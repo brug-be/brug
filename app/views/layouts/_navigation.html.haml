@@ -5,7 +5,6 @@
     %li= link_to 'Members', '#members'
     %li= link_to 'Blog', :blog
     - if current_member
-      %li= link_to 'Me', :profile
       %li= link_to 'Sign out', signout_path
     - else
       %li= link_to 'Join/Log in', '/auth/twitter'

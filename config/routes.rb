@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get 'auth/failure' => redirect('/')
   get 'signout' => 'sessions#destroy', as: 'signout'
 
-  resource :profile
-
   get '/blog'  => 'pages#blog'
   get '/about' => 'pages#about'
   get '/community' => 'pages#community'
