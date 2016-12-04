@@ -1,4 +1,4 @@
-== README
+# [DEPRECATED] This is the old community website for the Belgian ruby user group
 
 This is the repo for the Belgian Ruby UserGroup website ([BRUG](http://brug.be))
 Please fork or ask for project access so we can make this even better.
